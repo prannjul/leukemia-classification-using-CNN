@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block css %}
+    <style>
+        body{
+            background-color:rgb(241,204,147);
+            background-image: url('/static/images/register_page_hero.svg');
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+    <div class="container vh-100">
+      
+        {% include "notification.html" %}
+      
+        <div class="row">
+            <div class="col-sm-12 col-md-7" style="margin-top: 6rem;">
+                <div class="card shadow-lg m-4">
+                    <div class="card-header">
+                        <div-class="card-title"><h2>Register your account</h2></div>
+                    </div>
+                    <form method="POST" class ="p-5">
+                        <div class="form-group">
+                          <label for="name">Your name</label>
+                          <input type="text"
+                            class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+                          <small id="helpId" class="form-text text-muted">fill in the full name</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="email">email address</label>
+                          <input type="text"
+                            class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="john@gmail.com">
+                          <small id="helpId" class="form-text text-muted">enter a valid email address</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="">Password</label>
+                          <input type="password"
+                            class="form-control" name="password" id="password" aria-describedby="passhelpId" placeholder="min 6 chars">
+                          <small id="passhelpId" class="form-text text-muted">enter a password</small>
+                        </div>
+                        <div class="form-group">
+                          <label for="cpassword">Confirm password</label>
+                          <input type="password"
+                            class="form-control" name="cpassword" id="cpassword" aria-describedby="passhelpId" placeholder="min 6 chars">
+                          <small id="cpasshelpId" class="form-text text-muted">enter a password</small>
+                        </div>
+                        <button class="btn btn-success btn-block">Continue</button>  
+                    </form >   
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}{% endblock %}
